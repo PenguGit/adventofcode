@@ -4,6 +4,9 @@
  */
 package adventofcode;
 
+import adventofcode.days.day1;
+
+
 /**
  *
  * @author qp
@@ -14,7 +17,9 @@ public class Adventofcode {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        day1.readandSort();
+        day1.runFirst();
+        day1.runSecond();
     }
-    
+   
 }
