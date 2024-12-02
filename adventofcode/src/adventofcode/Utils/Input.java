@@ -4,6 +4,8 @@
  */
 package adventofcode.Utils;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -22,5 +24,19 @@ public class Input {
             extracted.add(number);
         }
         return extracted;
+    }
+    public static ArrayList<ArrayList<Integer>> readFile(String filename) {
+        String filepath = "./src/adventofcode/files/" + filename;
+        ArrayList<ArrayList<Integer>> readList = new ArrayList<>();
+        try (BufferedReader bR = new BufferedReader(new FileReader(filepath))) {
+            String line;
+            while ((line = bR.readLine()) != null) {
+                ArrayList<Integer> temp = Input.extractNumbers(line);
+                readList.add(temp);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return readList;
     }
 }

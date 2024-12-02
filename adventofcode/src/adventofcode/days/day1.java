@@ -29,13 +29,14 @@ public class day1 {
                 firstList.add(temp.get(0));
                 secondList.add(temp.get(1));
 
-                /* Alternative to above
-                String[] templine = line.split("\\s+");
-                firstList.add(Integer.valueOf(templine[0]));
-                secondList.add(Integer.valueOf(templine[1]));
-                 */
+                 //Alternative to above
+//                String[] templine = line.split("\\s+");
+//                firstList.add(Integer.valueOf(templine[0]));
+//                secondList.add(Integer.valueOf(templine[1]));
+                 
             }
         } catch (Exception e) {
+            e.printStackTrace();
             //Find out why there are a bunch of errors I guess?
         }
         Collections.sort(firstList);
@@ -50,7 +51,7 @@ public class day1 {
             result += abs;
             i++;
         }
-        System.out.println(result);
+        System.out.println("The total distance between the lists is: " + result);
     }
 
     public static void runSecond() {
@@ -68,6 +69,6 @@ public class day1 {
                 }
             }
         }
-        System.out.println(result);
+        System.out.println("The similarity score is: " + result);
     }
 }

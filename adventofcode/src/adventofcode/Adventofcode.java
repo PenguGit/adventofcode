@@ -5,7 +5,7 @@
 package adventofcode;
 
 import adventofcode.days.day1;
-
+import adventofcode.days.day2;
 
 /**
  *
@@ -16,10 +16,32 @@ public class Adventofcode {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) {
-        day1.readandSort();
-        day1.runFirst();
-        day1.runSecond();
+        int day = 1;
+        switch (day) {
+            case 1 -> {
+                System.out.println("---------------");
+                System.out.println("Day 1 Output: ");
+                System.out.println("---------------");
+                day1.readandSort();
+                System.out.println("First Half: ");
+                day1.runFirst();
+                System.out.println("---------------");
+                System.out.println("Second Half: ");
+                day1.runSecond();
+            }
+            case 2 -> {
+                System.out.println("---------------");
+                System.out.println("Day 2 Output");
+                System.out.println("---------------");
+                System.out.println("First Half: ");
+                day2.runFirst();
+                System.out.println("---------------");
+                System.out.println("Second Half: ");
+                day2.runSecond();
+            }
+            default -> throw new AssertionError();
+        }
     }
-   
 }
