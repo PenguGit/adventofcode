@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
  * @author qp
  */
 public class Input {
+
     public static ArrayList<Integer> extractNumbers(String input) {
         ArrayList<Integer> extracted = new ArrayList<>();
         Pattern pattern = Pattern.compile("-?\\d+");
@@ -25,6 +26,17 @@ public class Input {
         }
         return extracted;
     }
+
+    public static ArrayList<String> extractRegex(String input, String regex) {
+        ArrayList<String> extracted = new ArrayList<>();
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(input);
+        while (matcher.find()) {
+            extracted.add(matcher.group());
+        }
+        return extracted;
+    }
+
     public static ArrayList<ArrayList<Integer>> readFile(String filename) {
         String filepath = "./src/adventofcode/files/" + filename;
         ArrayList<ArrayList<Integer>> readList = new ArrayList<>();

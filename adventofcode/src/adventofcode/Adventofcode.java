@@ -6,6 +6,7 @@ package adventofcode;
 
 import adventofcode.days.day1;
 import adventofcode.days.day2;
+import adventofcode.days.day3;
 
 /**
  *
@@ -18,7 +19,7 @@ public class Adventofcode {
      */
     
     public static void main(String[] args) {
-        int day = 2;
+        int day = 3;
         switch (day) {
             case 1 -> {
                 System.out.println("---------------");
@@ -40,6 +41,16 @@ public class Adventofcode {
                 System.out.println("---------------");
                 System.out.println("Second Half: ");
                 day2.runSecond();
+            }
+            case 3 -> {
+                System.out.println("---------------");
+                System.out.println("Day 2 Output");
+                System.out.println("---------------");
+                System.out.println("First Half: ");
+                //day3.runFirst();
+                System.out.println("---------------");
+                System.out.println("Second Half: ");
+                day3.runSecond();
             }
             default -> throw new AssertionError();
         }
