@@ -37,14 +37,13 @@ public class Input {
         return extracted;
     }
 
-    public static ArrayList<ArrayList<Integer>> readFile(String filename) {
+    public static ArrayList<String> readFile(String filename) {
         String filepath = "./src/adventofcode/files/" + filename;
-        ArrayList<ArrayList<Integer>> readList = new ArrayList<>();
+        ArrayList<String> readList = new ArrayList<>();
         try (BufferedReader bR = new BufferedReader(new FileReader(filepath))) {
             String line;
             while ((line = bR.readLine()) != null) {
-                ArrayList<Integer> temp = Input.extractNumbers(line);
-                readList.add(temp);
+                readList.add(line);
             }
         } catch (Exception e) {
             e.printStackTrace();

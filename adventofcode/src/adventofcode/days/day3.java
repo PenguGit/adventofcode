@@ -23,7 +23,6 @@ public class day3 {
             String line;
             while ((line = bR.readLine()) != null) {
                 ArrayList<String> temp = Input.extractRegex(line, "(mul\\((\\d+,\\d+)\\)))");
-                //Check if the report is safe
                 for (String mul : temp) {
                     String[] split = mul.split(",");
                     result += Integer.valueOf(split[0]) * Integer.valueOf(split[1]);
